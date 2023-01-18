@@ -1,0 +1,15 @@
+
+[1mFrom:[0m /media/sf_Sharefolder/rubyschool_video/lesson_12/app2.rb:58 :
+
+    [1;34m53[0m:   puts [31m[1;31m'[0m[31mYour move on y:[1;31m'[0m[31m[0m
+    [1;34m54[0m:   y = gets.downcase.strip
+    [1;34m55[0m: 
+    [1;34m56[0m:   @field[y][x] = [31m[1;31m'[0m[31mx[1;31m'[0m[31m[0m
+    [1;34m57[0m:   binding.pry
+ => [1;34m58[0m:   pc_move
+    [1;34m59[0m: 
+    [1;34m60[0m: [32mend[0m
+    [1;34m61[0m: 
+    [1;34m62[0m:   
+    [1;34m63[0m: 
+

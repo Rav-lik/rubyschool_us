@@ -1,0 +1,17 @@
+===============
+
+1 2 3 
+1 2 3 
+1 2 3 
+
+Push Enter to exit at any step
+Your move on x (Push Enter to exit):
+Your move on y (Push Enter to exit):
+===============
+
+o 2 3 
+x 2 3 
+1 2 3 
+
+Push Enter to exit at any step
+Your move on x (Push Enter to exit):
