@@ -1,0 +1,19 @@
+<h1>List of clients:</h1>
+<p><%= @message %></p>
+<% if @logfile %>
+  <% @logfile.each do |line| %>
+    <p> <%= line %> </p>
+  <% end %>
+<% end %>
+
+<form action="/admin" method="POST">
+  
+  Your login: <br />
+  <input type="text" name="admin_name" /><br />
+  
+  Password: <br />
+  <input type="password" name="password" /><br />
+  
+  <input type="submit" />
+
+</form>
