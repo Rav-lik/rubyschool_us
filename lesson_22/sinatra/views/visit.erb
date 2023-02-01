@@ -1,0 +1,47 @@
+<h2>Записаться</h2>
+<p>На этой странице вы можете записаться к нам в Barber shop</p>
+<form action="/visit" method="post" class="form-horizontal">
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Your name</label>
+    <div class="col-sm-10">
+      <input name="name" type="text" class="form-control" placeholder="Your name">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Your phone</label>
+    <div class="col-sm-10">
+      <input name="phone" type="text" class="form-control" placeholder="Your phone">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Когда вас ждать?</label>
+    <div class="col-sm-10">
+      <input name="date_time" type="datetime-local" class="form-control" placeholder="Print date and time">
+    </div>
+  </div>
+
+  <div class="col-md-5">
+    <label for="barber" class="form-label">Barber</label>
+    <select class="form-select" name="barber" id="barber" required>
+      <option value="default">Choose...</option>
+      <option>Walter White</option>
+      <option>Jessie Pinkman</option>
+      <option>Gus Fring</option>
+    </select>
+    <div class="invalid-feedback">
+      Please select a barber for check in.
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-primary">Check in</button>
+    </div>
+  </div>
+
+</form>
+
+<a href="/visit/users">Visit users</a>
