@@ -1,0 +1,6 @@
+<h2>List of clients:</h2>
+<ul>
+  <% @output_users.each do |row| %>
+  <li><%= "#{row['name']} checked in #{row['date_stamp']}." %></li>
+  <% end %>
+</ul>
