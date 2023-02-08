@@ -1,0 +1,12 @@
+.idea/
+bootstrap_app/
+.editorconfig
+sinatra-bootstrap-clean/
+jquery-simplecolorpicker/
+mail_app.rb
+send_from_gmail.rb
+send_from_mail.rb
+send_from_yandex.rb
+*.db
+*.sqlite3
+test/
