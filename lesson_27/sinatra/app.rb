@@ -7,6 +7,18 @@ def get_db
   @db = SQLite3::Database.new 'barbershop.db'
 end
 
+def is_barber_exist? db, name
+  db.execute('SELECT * FROM Barbers where name=?', [name]).length > 0
+end
+
+def seed_db db, barbers
+  barbers.each do |barber|
+    unless is_barber_exist?(db, barber)
+      db.execute 'INSERT INTO Barbers (name) VALUES (?)', [barber] 
+    end
+  end
+end
+
 def init_db
   get_db
   @db.execute 'CREATE TABLE IF NOT EXISTS
@@ -27,9 +39,6 @@ def init_db
         "name"TEXT UNIQUE,
         PRIMARY KEY("id" AUTOINCREMENT)
       );'
-  # @db.execute 'INSERT OR IGNORE INTO Barbers (name) VALUES ("Gus Fring");'
-  # @db.execute 'INSERT OR IGNORE INTO Barbers (name) VALUES ("Walter White");'
-  # @db.execute 'INSERT OR IGNORE INTO Barbers (name) VALUES ("Jessie Pinkman");'
 end
 
 def validation_error
@@ -40,6 +49,7 @@ def validation_error
     barber: 'You did\'t choose a barber',
     colorpicker: 'You didn\'t choose a color for your hair'
   }
+
   # my method without validation_error
   # params.each do |k, v|
   #   if v.empty?
@@ -74,6 +84,8 @@ end
 
 configure do
   init_db
+  seed_db(@db, ['Jessie Pinkman', 'Walter White', 'Gus Fring', 'Mike Ehrmantraut'])
+  
   enable :sessions
 end
 
