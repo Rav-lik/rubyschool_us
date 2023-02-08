@@ -4,3 +4,28 @@
   <li><%= "#{row['name']} checked in #{row['date_stamp']}." %></li>
   <% end %>
 </ul>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Date, Time</th>
+      <th scope="col">Barber</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% count = 0 %>
+  <% @output_users.each do |row|%>
+    <% count += 1 %>
+    <tr>
+      <th scope="row"><%= count %></th>
+      <td><%= row['name'] %></td>
+      <td><%= row['phone'] %></td>
+      <td><%= row['date_stamp'] %></td>
+      <td><%= row['barber'] %></td>
+    </tr>
+    <% end %>  
+  </tbody>
+</table>

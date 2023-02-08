@@ -159,7 +159,7 @@ get '/visit/show_users' do
   get_db
 
   @db.results_as_hash = true
-  @output_users = @db.execute 'SELECT name, date_stamp FROM Users ORDER BY id DESC'
+  @output_users = @db.execute 'SELECT name, phone, date_stamp, barber FROM Users ORDER BY id DESC'
   @db.close
 
   erb :show_users
