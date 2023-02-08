@@ -49,7 +49,7 @@ def validation_error
     barber: 'You did\'t choose a barber',
     colorpicker: 'You didn\'t choose a color for your hair'
   }
-
+  
   # my method without validation_error
   # params.each do |k, v|
   #   if v.empty?
