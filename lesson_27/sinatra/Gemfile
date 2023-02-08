@@ -1,0 +1,8 @@
+source "https://rubygems.org"
+
+gem "sinatra"
+gem "pony"
+gem "sqlite3"
+group :development, :test do
+  gem "rerun"
+end
